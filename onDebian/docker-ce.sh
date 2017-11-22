@@ -2,6 +2,12 @@
 
 # compiled from https://docs.docker.com/engine/installation/linux/docker-ce/debian/#install-docker-ce
 
+echo "**************************************"
+echo "LABEL maintainer=\"Ahmet AKSIT ahmetaksit@gmail.com\""
+echo "Docker-ce installing....
+echo "Tested for Debian 8 (jessie)
+echo "**************************************"
+
 sudo apt-get update -y
 sudo apt-get dist-upgrade -y
 
