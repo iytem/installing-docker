@@ -3,8 +3,8 @@
 # compiled from https://docs.docker.com/engine/installation/linux/docker-ce/debian/#install-docker-ce
 
 echo "**************************************"
-echo "LABEL maintainer=\"Ahmet AKSIT ahmetaksit@gmail.com\""
-echo "Docker-ce installing....
+echo "LABEL maintainer=\"Ahmet AKSIT ahmetaksit@gmail.com\" "
+echo "Docker-ce installing...."
 echo "Tested for Debian 8 (jessie)"
 echo "**************************************"
 
@@ -17,7 +17,7 @@ sudo apt-get install \
      curl \
      gnupg2 \
      software-properties-common -y
-     
+
 curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg -k | sudo apt-key add -
 # sudo apt-key fingerprint 0EBFCD88
 
@@ -34,7 +34,7 @@ sudo apt-get install docker-ce -y
 sudo groupadd docker
 sudo usermod -a $USER -G docker
 
-sudo systemctl start docker.service 
+sudo systemctl start docker.service
 
 echo "***************************************"
 sudo docker --version
