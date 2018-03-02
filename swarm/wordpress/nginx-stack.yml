@@ -1,12 +1,16 @@
 # https://docs.docker.com/compose/compose-file/#compose-file-structure-and-examples
-version: "3"
+version: '3'
 services:
 
   nginx:
-    image: nginx:alpine
+    image: nginx:stable #nginx:alpine
+    volumes:
+      - "./docker-swarm/config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro"
+      - "./logs/nginx:/var/log/nginx"
+      - "./wordpress:/var/www/html/public"
     ports:
-      - "8000:80"
-      - "3000:443"
+      - "80:80"
+      - "443:443"
     networks:
       - frontend
     deploy:
@@ -16,5 +20,6 @@ services:
         delay: 10s
       restart_policy:
         condition: on-failure
+
 networks:
   frontend:
