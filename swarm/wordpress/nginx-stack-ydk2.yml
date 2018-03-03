@@ -5,9 +5,9 @@ services:
   nginx:
     image: nginx:stable #nginx:alpine
     volumes:
-      - "${PWD}/docker-swarm/config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro"
-      - "${PWD}/logs/nginx:/var/log/nginx"
-      - "${PWD}/wordpress:/var/www/html/public"
+      - nginx-default:/etc/nginx/conf.d/default.conf:ro
+      - "./logs/nginx:/var/log/nginx"
+      - "./wordpress:/var/www/html/public"
     ports:
       - "80:80"
       - "443:443"
@@ -20,6 +20,13 @@ services:
         delay: 10s
       restart_policy:
         condition: on-failure
+
+volumes:
+  nginx-default:
+    driver: local
+    driver_opts:
+      type: bind
+      source: ${PWD}/docker-swarm/config/nginx/default.conf
 
 networks:
   frontend:
