@@ -4,3 +4,6 @@ dockerized wordpress
   https://github.com/nanoninja/docker-nginx-php-mysql
 
   https://www.howtoforge.com/tutorial/dockerizing-wordpress-with-nginx-and-php-fpm/
+
+
+  commandline: while true; do curl http://localhost:8080/index.html; sleep 0.5; done;
