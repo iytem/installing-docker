@@ -1,4 +1,5 @@
 # write: Ahmet AKŞİT
 
 # all logs files
-**/*.log
+./swarm/wordpress/logs
+**/**/**/**/*.log
