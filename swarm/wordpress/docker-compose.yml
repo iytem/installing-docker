@@ -5,8 +5,10 @@ services:
     # image: nginx:stable #nginx:alpine
     # build: ./docker-swarm/build/nginx/stable/stretch
     build:
-      context: ./docker-swarm/build/nginx/stable/stretch
-      dockerfile: Dockerfile
+      # context: ./docker-swarm/build/nginx/stable/stretch
+      # dockerfile: Dockerfile
+      context: ./docker-swarm/build/nginx
+      dockerfile: Dockerfile-timezone
       args:
         buildno: 1
     volumes:
