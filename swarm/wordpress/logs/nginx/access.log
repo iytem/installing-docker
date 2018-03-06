@@ -1,2 +1,5 @@
 nginx access.log file
-eqeqw
+10.0.2.2 - - [06/Mar/2018:11:18:53 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/64.0.3282.167 Chrome/64.0.3282.167 Safari/537.36" "-"
+10.0.2.2 - - [06/Mar/2018:11:18:54 +0000] "GET /index.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/64.0.3282.167 Chrome/64.0.3282.167 Safari/537.36" "-"
+10.0.2.2 - - [06/Mar/2018:11:19:00 +0000] "GET /index.htmlp HTTP/1.1" 404 169 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0" "-"
+10.0.2.2 - - [06/Mar/2018:11:19:01 +0000] "GET /index.htmlp HTTP/1.1" 404 169 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0" "-"
