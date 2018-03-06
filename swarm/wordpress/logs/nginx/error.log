@@ -1,3 +1,1 @@
 nginx error.log file
-2018/03/06 11:19:00 [error] 5#5: *2 open() "/usr/share/nginx/html/index.htmlp" failed (2: No such file or directory), client: 10.0.2.2, server: localhost, request: "GET /index.htmlp HTTP/1.1", host: "localhost:8080"
-2018/03/06 11:19:01 [error] 5#5: *2 open() "/usr/share/nginx/html/index.htmlp" failed (2: No such file or directory), client: 10.0.2.2, server: localhost, request: "GET /index.htmlp HTTP/1.1", host: "localhost:8080"
