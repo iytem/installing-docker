@@ -1,4 +1,4 @@
 # write: Ahmet AKŞİT
 
 # all logs files
-*.log
+**/*.log
