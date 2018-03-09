@@ -49,7 +49,7 @@ services:
     # ports:
         # - '3306:3306'
     volumes:
-        - "mariadb_data:/var/lib"
+        - "./mariadb_data:/var/lib"
     environment:
         - MYSQL_ROOT_PASSWORD=aqwe123
     networks:
@@ -86,10 +86,3 @@ services:
 networks:
   frontend:
   backend:
-
-volumes:
-  mariadb_data:
-   driver_opts:
-      type: mount
-      device: $PWD/mariadb_data
-      o: bind
