@@ -6,8 +6,6 @@ services:
     volumes:
         - "${PWD}/docker-swarm/config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro"
         - "${PWD}/code/wordpress.4.9:/var/www/html"
-        - "${PWD}/code/wp-content:/var/www/html/wp-content"
-        - "${PWD}/uploads:/var/www/html/wp-content/uploads"
         - "${PWD}/logs/nginx:/var/log/nginx"
     ports:
         - "80:80"
@@ -29,8 +27,6 @@ services:
         # - '9000:9000'
     volumes:
         - "${PWD}/code/wordpress.4.9:/var/www/html"
-        - "${PWD}/code/wp-content:/var/www/html/wp-content"
-        - "${PWD}/uploads:/var/www/html/wp-content/uploads"
     environment:
         - WORDPRESS_DB_NAME=wpdbs
         - WORDPRESS_TABLE_PREFIX=wp_
@@ -53,7 +49,7 @@ services:
     # ports:
         # - '3306:3306'
     volumes:
-        - mariadb-data:/var/lib/mysql
+        - "mariadb_data:/var/lib/mysql"
     environment:
         - MYSQL_ROOT_PASSWORD=aqwe123
     networks:
@@ -87,10 +83,13 @@ services:
       restart_policy:
         condition: on-failure
 
-volumes:
-  mariadb-data:
-     driver: local
-
 networks:
   frontend:
   backend:
+
+volumes:
+  mariadb_data:
+   driver_opts:
+      type: volume
+      device: $PWD/mariadb_data
+      o: bind
