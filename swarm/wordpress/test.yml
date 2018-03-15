@@ -1,0 +1,13 @@
+version: "3"
+services:
+    postgres:
+    image: postgres:9.5
+    volumes:
+      - "postgres:/var/lib/postgresql/data"
+
+volumes
+  postgres:
+    driver_opts:
+      o: bind
+      type: none
+      device: /data/database/postgres/bp
