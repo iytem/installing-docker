@@ -30,9 +30,6 @@ sudo apt-get update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 #sudo apt-cache madison docker-ce
 
-sudo groupadd docker
-sudo usermod -a $USER -G docker
-
 sudo systemctl start docker.service
 
 echo "***************************************"
